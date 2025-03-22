@@ -5,8 +5,8 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CounterPageComponent {
-  counter = 10;
-  counterSignal = signal(10);
+  counter = 0;
+  counterSignal = signal(0);
 
   constructor() {
     setInterval(() => {
@@ -16,12 +16,12 @@ export class CounterPageComponent {
 
   increase() {
     this.counter++;
-    this.counterSignal.update((current) => current + 1);
+    //this.counterSignal.update((current) => current + 1);
   }
 
   decrease() {
     this.counter--;
-    this.counterSignal.update((current) => current - 1);
+    //this.counterSignal.update((current) => current - 1);
   }
 
   reset() {
