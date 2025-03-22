@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
-  templateUrl: 'counter-page.component.html',
+  templateUrl: './counter-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CounterPageComponent {

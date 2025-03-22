@@ -2,7 +2,7 @@ import { UpperCasePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
-  templateUrl: 'hero-page.component.html',
+  templateUrl: './hero-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [UpperCasePipe],
 })

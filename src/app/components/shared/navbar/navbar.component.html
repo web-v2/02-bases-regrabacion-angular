@@ -1,0 +1,28 @@
+<style>
+  nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  nav a.active{
+    color: yellow;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>
+<nav class="navbar bg-success">
+  <a
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Contador</a>
+  <a [routerLink]="['/hero']" [routerLinkActive]="'active'">Hero</a>
+  <a [routerLink]="['/dragonball']" [routerLinkActive]="'active'">Dragonball</a>
+</nav>
+

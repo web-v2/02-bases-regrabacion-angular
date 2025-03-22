@@ -1,0 +1,42 @@
+<h1>Dragonball Page</h1>
+<hr />
+<section class="row">
+  <div class="col-12 col-sm-6">
+    <h3>Agregar: {{name()}} - {{power()}}</h3>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Name"
+      [value]="name()"
+      (change)="name.set(txtName.value)"
+      (input)="name.set(txtName.value)"
+      #txtName>
+    <input
+      type="number"
+      class="form-control mt-2"
+      placeholder="Poder"
+      [value]="power()"
+      (change)="power.set( +txtPower.value)"
+      (input)="power.set( +txtPower.value )"
+      #txtPower>
+    <button (click)="addCharacter()" class="mt-2 btn btn-primary">Guardar</button>
+  </div>
+
+  <div class="col-12 col-sm-6">
+    <h3>Listado fuertes</h3>
+    <ol>
+      @for(ch of characters(); track ch.id){
+        @if(ch.power > 1000){
+          <li >
+            <span>{{ch.name}}</span>
+            <strong
+              [class.text-danger]="ch.power >= 9000"
+              [class.text-warning]="ch.power >= 6000 && ch.power < 9000"
+              [class.text-success]="ch.power < 6000"
+            > ({{ch.power}}) </strong>
+          </li>
+        }
+      }
+    </ol>
+  </div>
+</section>
