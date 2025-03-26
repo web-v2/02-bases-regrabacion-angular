@@ -1,4 +1,8 @@
-# 02BasesReg
+# App running
+
+https://angular19-bases-v2.netlify.app/#/dragonball-super
+
+# App Drango Ball - Bases Curso de Fernando Herrera regrabacion 2025
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
 
